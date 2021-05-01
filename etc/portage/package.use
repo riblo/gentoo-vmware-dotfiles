@@ -1,1 +1,55 @@
-/etc/portage/package.use
+# /etc/portage/package.use
+ 
+# required for root operations in plasma
+kde-plasma/kde-cli-tools kdesu X
+
+# required by layman
+app-portage/layman sync-plugin-portage git
+
+# chromium 
+www-client/chromium official
+
+# nmap 
+net-analyzer/nmap ncat nping
+
+# nerd-fonts fonts
+media-fonts/nerd-fonts terminus agave victormono
+
+# extra/testing by cava
+media-sound/alsa-utils bat
+
+# pulseaudio 
+media-sound/pulseaudio equalizer realtime system-wide
+
+# pulseffects extra
+media-sound/pulseeffects bs2b calf mda-lv2 rubberband
+>=media-plugins/calf-0.90.3-r1 lv2
+
+# qemu stuffs
+app-emulation/qemu spice ssh
+=net-misc/spice-gtk-0.37-r2 usbredir
+=net-dns/dnsmasq-2.83-r101 script
+>=dev-libs/libpcre2-10.35 pcre32
+
+# mpv dep
+dev-libs/libcdio minimal
+
+# required by dev-python/pyzmq-20.0.0::gentoo[-test]
+# required by dev-python/jupyter_client-6.1.11::gentoo
+# required by dev-python/qtconsole-5.0.2::gentoo
+# required by dev-python/ipython-7.21.0-r1::gentoo[qt5]
+# required by dev-python/ipykernel-5.5.0::gentoo[-test]
+# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
+>=net-libs/zeromq-4.3.3-r1 drafts
+
+# required by dev-python/qtconsole-5.0.2::gentoo
+# required by dev-python/ipython-7.21.0-r1::gentoo[qt5]
+# required by dev-python/ipykernel-5.5.0::gentoo[-test]
+# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
+>=dev-python/QtPy-1.9.0-r2 printsupport
+
+# required by gnome-base/gnome-keyring-3.36.0::gentoo
+# required by app-crypt/libsecret-0.20.4::gentoo
+# required by app-editors/visual-studio-code-bin-1.55.2::guru
+# required by app-editors/visual-studio-code-bin (argument)
+>=app-crypt/pinentry-1.1.0-r4 gnome-keyring

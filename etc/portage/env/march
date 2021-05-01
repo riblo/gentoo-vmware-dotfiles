@@ -1,1 +1,2 @@
-/etc/portage/env/march
+CFLAGS="-march=native"
+CXXFLAGS="${CFLAGS}"

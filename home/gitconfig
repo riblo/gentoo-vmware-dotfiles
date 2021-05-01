@@ -1,1 +1,27 @@
-/home/riblo/github/.gitconfig
+[user]
+	email = r1cc4rd0b@inpeco.com
+	username = riblo
+[credential]
+	helper = cache
+[alias]
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	last = log -10 --color --pretty=format:'%C(red)%h%Creset - %C(bold white)%s%Creset %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	diff = diff --color
+[push]
+	default = matching
+[color]
+	ui = auto
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = side-by-side line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none

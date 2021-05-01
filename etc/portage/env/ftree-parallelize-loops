@@ -1,1 +1,4 @@
-/etc/portage/env/ftree-parallelize-loops
+# Use it only when the library / software doesn't use threading to be safe.
+# Also use it when -O3 (because of presence of -ftree-loop-distribute-*).
+CFLAGS="${CFLAGS} -ftree-parallelize-loops=8"
+CXXFLAGS="${CXXFLAGS} -ftree-parallelize-loops=8"

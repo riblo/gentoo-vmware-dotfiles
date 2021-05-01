@@ -1,1 +1,2 @@
-/etc/portage/env/fprefetch-loop-arrays
+CFLAGS="${CFLAGS} -fprefetch-loop-arrays"
+CXXFLAGS="${CXXFLAGS} -fprefetch-loop-arrays"

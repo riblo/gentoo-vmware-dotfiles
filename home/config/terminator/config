@@ -1,1 +1,68 @@
-/home/riblo/.config/terminator/config
+[global_config]
+  geometry_hinting = True
+  title_hide_sizetext = True
+  inactive_color_offset = 0.8048387096774193
+  enabled_plugins = ActivityWatch, CustomCommandsMenu, TerminalShot, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
+  always_split_with_profile = True
+  title_font = Iosevka Term Oblique Expanded 7
+[keybindings]
+  zoom_in = <Primary>plus
+  zoom_out = <Primary>minus
+  go_next = <Primary><Shift>m
+  new_terminator = <Primary><Shift>n
+  next_profile = <Primary>b
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_darkness = 0.83
+    background_type = transparent
+    cursor_color = "#9141ac"
+    font = agave Nerd Font Mono 16
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    disable_mousewheel_zoom = True
+    palette = "#000000:#ed333b:#00cd00:#cdcd00:#1a5fb4:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#f66151:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    login_shell = True
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[black]]
+    icon_bell = False
+    background_darkness = 1.0
+    cursor_color = "#9141ac"
+    font = agave Nerd Font Mono 16
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#000000:#ed333b:#00cd00:#cdcd00:#1a5fb4:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#f66151:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    login_shell = True
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[transparent]]
+    icon_bell = False
+    background_darkness = 0.33
+    background_type = transparent
+    cursor_color = "#9141ac"
+    font = agave Nerd Font Mono 16
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#000000:#ed333b:#00cd00:#cdcd00:#1a5fb4:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#f66151:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    login_shell = True
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

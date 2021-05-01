@@ -1,1 +1,2 @@
-/etc/portage/env/pipe
+CFLAGS="${CFLAGS} -pipe"
+CXXFLAGS="${CXXFLAGS} -pipe"

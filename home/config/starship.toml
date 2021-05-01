@@ -1,1 +1,45 @@
-/home/riblo/.config/starship.toml
+format = [
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_state",
+    "git_status",
+    "package",
+    "memory_usage",
+    "env_var",
+    "line_break",
+    "jobs",
+    "battery",
+    "time",
+    "character",
+    "cmd_duration"
+]
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[cmd_duration]
+show_milliseconds = false
+
+[username]
+style_root = "bold white"
+style_user = "bold white"
+format = "[$user]($style)[@](bold green)"
+show_always = true
+
+[hostname]
+ssh_only = false
+style = "bold white"
+
+# Replace the "❯" symbol in the prompt with "➜" 
+# useful symbols here: http://panmental.de/symbols/info.htm
+
+[character]
+success_symbol = "[➤ ](bold green)"
+error_symbol = "[➤ ](bold red)"
+#error_symbol = "[✖ ](bold red)"
+
+[directory]
+style = "bold green"

@@ -1,1 +1,9 @@
-/home/riblo/.bash_logout
+# /etc/skel/.bash_logout
+
+# This file is sourced when a login shell terminates.
+
+# Clear the screen for security's sake.
+clear
+
+# remove duplicates and preserve history order between terminals (moreutils required) 
+history_update_and_clean

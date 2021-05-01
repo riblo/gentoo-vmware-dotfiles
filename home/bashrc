@@ -1,1 +1,70 @@
-/home/riblo/.bashrc
+# .bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# ble.sh inizializer
+[[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh --noattach
+
+## Shell optional behaviors
+# correct minor spelling mistakes
+shopt -s cdspell dirspell
+
+# type the name of a directory (in the current directory) and automatically change into it
+shopt -s autocd direxpand
+
+# append buffer history to the end of the history file ($HISTFILE)
+shopt -s histappend
+
+## History stuffs
+# huge history sizing
+HISTSIZE=10000
+HISTFILESIZE=30000
+
+# ignore commands
+HISTIGNORE="&:history:ls:l:la:ll:[bf]g:exit"
+
+# ignore and remove duplicates into $HISTFILE
+export HISTCONTROL=ignoredups:erasedups
+
+# trick functions to sync and preserve history order between terminals (moreutils required)
+history_update_and_clean() { history -a; tac $HISTFILE | awk '!x[$0]++' | tac | sponge $HISTFILE; history -c; history -r; }
+history_update() { history -a; history -c; history -r; }
+
+# append update_history to PROMPT_COMMAND in order to preserve it for autojumps
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history_update"
+
+# Aliases
+# wrap the following commands for interactive use to avoid accidental file overwrites
+rm() { command rm -i "${@}"; }
+cp() { command cp -i "${@}"; }
+mv() { command mv -i "${@}"; }
+
+# grep aliases
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# ls aliases (grc required)
+alias ll='grc ls -alhF --color'
+alias la='ls -AF'
+alias l='ls -CF'
+alias df='grc df -h'
+
+# ssh && scp aliases
+alias ossh='ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no"'
+alias oscp='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+
+# Misc
+# backend PS1 (overrided by starship)
+PS1='\[\033[01;37m\][\u\[\033[32m\]@\[\033[01;37m\]$(hostname -f):\[\033[01;37m\]\[\033[32m\]\w\[\033[01;37m\]] \$\[\033[00m\] '
+
+# enable autojump
+source /etc/profile.d/autojump.sh
+
+# enable starship
+eval "$(starship init bash)"
+
+# enable ble.sh
+[[ ${BLE_VERSION-} ]] && ble-attach
+

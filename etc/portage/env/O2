@@ -1,1 +1,2 @@
-/etc/portage/env/O2
+CFLAGS="${CFLAGS} -O2"
+CXXFLAGS="${CXXFLAGS} -O2"

@@ -1,1 +1,4 @@
-/etc/portage/package.mask
+# /etc/portage/package.mask
+
+# Prevent Chromium from being compiled again
+>=www-client/chromium-90.0.4430.72

@@ -1,10 +1,12 @@
 # dotfiles-gentoo
 
+![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
+
 ## My "eye-candy" bash dotfiles supports:
 - custom syntax highlighting and enhanced completion (like *fish*) with [ble.sh](https://github.com/akinomyoga/ble.sh)
 - [starship](https://starship.rs/) custom prompt
 - useful [shopt](https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html) behaviors and aliases
-- shared/cleaned *history* between terminals (see **Credits**)
+- shared/cleaned *history* between terminals (see **References**)
 - *cd* improved with [autojump](https://github.com/wting/autojump)
 - better colorized output with  [grc](https://github.com/garabik/grc)
 - *gitconfig* with [delta](https://github.com/dandavison/delta) highlight enabled
@@ -13,9 +15,9 @@
 - [terminator](https://terminator-gtk3.readthedocs.io/) conf
 
 ## My Gentoo stuffs:
-- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation*
+- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player*
 - [package.env](https://wiki.gentoo.org/wiki//etc/portage/package.env) for [overriding environment per package](https://wiki.gentoo.org/wiki/Knowledge_Base:Overriding_environment_variables_per_package)
-- [custom cflags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) per package build optimization (see **Credits**)
+- [custom cflags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) per package build optimization (see **References**)
 - [package files](https://wiki.gentoo.org/wiki/Handbook:Parts/Portage/Files#User-specific_configuration)
 - [WIP] debloated/vm-oriented kernel [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and [zen-sources](https://github.com/zen-kernel/zen-kernel) 
 - [ccache](https://ccache.dev/) conf
@@ -24,13 +26,12 @@
 Clone, review the needed code and **use at your own risk!**
 
 ## TODO
-- add new *bash* shortcuts
 - improve *history* management/approach
+- improve *bash* shortcuts
 - [WIP] add [fzf](https://github.com/junegunn/fzf) support
-- [WIP] improve kernel configurations 
-- try to improve audio latency, playing with *jack*(https://github.com/jackaudio) or *pipewire*(https://pipewire.org/)
-- try to resurrect [fbsplash](https://wiki.gentoo.org/wiki/Fbsplash) [just for fun]
-
+- [WIP] improve kernel configurations and test [xanmod](https://xanmod.org/) preempt one  
+- try to improve audio latency, playing with [jack](https://github.com/jackaudio) or [pipewire](https://pipewire.org/)
+- [JFF] try to resurrect [fbsplash](https://wiki.gentoo.org/wiki/Fbsplash)
 ## References
 
 #### history improvements && .bashrc stuffs
@@ -50,3 +51,4 @@ Clone, review the needed code and **use at your own risk!**
 - https://wiki.archlinux.org/index.php/VMware/Install_Arch_Linux_as_a_guest
 - https://wiki.gentoo.org/wiki/Kernel/Upgrade
 - https://forums.gentoo.org/viewtopic-t-961502.html
+- https://github.com/owl4ce/kurisu-x86_64

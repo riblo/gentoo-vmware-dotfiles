@@ -15,12 +15,13 @@
 - [terminator](https://terminator-gtk3.readthedocs.io/) conf
 
 ## My Gentoo stuffs:
-- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player*
+- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player* with custom FEATURES, MAKEOPTS, etc for *Portage* parallel package builds 
 - [package.env](https://wiki.gentoo.org/wiki//etc/portage/package.env) for [overriding environment per package](https://wiki.gentoo.org/wiki/Knowledge_Base:Overriding_environment_variables_per_package)
 - [custom cflags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) per package build optimization (see **References**)
 - [package files](https://wiki.gentoo.org/wiki/Handbook:Parts/Portage/Files#User-specific_configuration)
-- [WIP] debloated/vm-oriented kernel [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and [zen-sources](https://github.com/zen-kernel/zen-kernel) 
-- [ccache](https://ccache.dev/) conf
+- [clang](https://wiki.gentoo.org/wiki/Clang) compiler for *LLVM* alternative toolchain
+-  ~~Removed unuseful [ccache](https://ccache.dev/) conf~~, mounted [Portage_TMPDIR_on_tmpfs](https://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs)
+- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the stable rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and an experimental one for ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/), compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO in order to have the best Desktop performance (thanks to https://github.com/owl4ce/kurisu-x86_64)
 
 ## Installation
 Clone, review the needed code and **use at your own risk!**
@@ -29,7 +30,7 @@ Clone, review the needed code and **use at your own risk!**
 - improve *history* management/approach
 - improve *bash* shortcuts
 - [WIP] add [fzf](https://github.com/junegunn/fzf) support
-- [WIP] improve kernel configurations and test [xanmod](https://xanmod.org/) preempt one  
+- ~~[WIP] improve kernel configurations and test [xanmod](https://xanmod.org/) preempt one~~  
 - try to improve audio latency, playing with [jack](https://github.com/jackaudio) or [pipewire](https://pipewire.org/)
 - [JFF] try to resurrect [fbsplash](https://wiki.gentoo.org/wiki/Fbsplash)
 ## References
@@ -51,4 +52,3 @@ Clone, review the needed code and **use at your own risk!**
 - https://wiki.archlinux.org/index.php/VMware/Install_Arch_Linux_as_a_guest
 - https://wiki.gentoo.org/wiki/Kernel/Upgrade
 - https://forums.gentoo.org/viewtopic-t-961502.html
-- https://github.com/owl4ce/kurisu-x86_64

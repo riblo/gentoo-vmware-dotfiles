@@ -7,6 +7,9 @@ mount /boot
 # Copy .config
 cp -v .config /usr/src/linux/.config
 
+# Copy localversion
+cp -v localversion /usr/src/linux/localversion
+
 # Last checks 
 make -j$(nproc) menuconfig 
 
@@ -20,7 +23,8 @@ make -j$(nproc) modules_install
 make -j$(nproc) install
 
 # Create initramfs
-dracut --kver 5.15.11-gentoo-x86_64 /boot/initramfs-5.15.11-gentoo-x86_64.img --force
+dracut --kver 5.15.11-gentoo-preempt-x86_64 /boot/initramfs-5.15.11-gentoo-preempt-x86_64.img --force
+
 
 # Update grub2
 grub-mkconfig -o /boot/grub/grub.cfg

@@ -27,8 +27,8 @@ ble-color-setface filename_setuid fg=black,bg=220,underline
 ble-color-setface filename_socket fg=cyan,bg=black,underline
 ble-color-setface filename_url fg=blue,underline
 ble-color-setface filename_warning fg=252,underline
-ble-color-setface menu_filter_fixed bold
-ble-color-setface menu_filter_input fg=16,bg=229
+#ble-color-setface menu_filter_fixed bold
+#ble-color-setface menu_filter_input fg=16,bg=229
 ble-color-setface overwrite_mode fg=black,bg=51
 ble-color-setface prompt_status_line fg=231,bg=240
 ble-color-setface region fg=white,bg=60

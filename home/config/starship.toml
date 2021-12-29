@@ -26,19 +26,19 @@ show_milliseconds = false
 [username]
 style_root = "bold white"
 style_user = "bold white"
-format = "[$user]($style)[@](bold green)"
+format = "┌ [$user]($style)[@](bold green)"
 show_always = true
 
 [hostname]
 ssh_only = false
 style = "bold white"
-
+#┌──[\u@\h]─[\w]\n└──╼ \$
 # Replace the "❯" symbol in the prompt with "➜" 
 # useful symbols here: http://panmental.de/symbols/info.htm
 
 [character]
-success_symbol = "[➤ ](bold green)"
-error_symbol = "[➤ ](bold red)"
+success_symbol = "└[➤ ](bold green)"
+error_symbol = "└[➤ ](bold red)"
 #error_symbol = "[✖ ](bold red)"
 
 [directory]

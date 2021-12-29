@@ -42,9 +42,9 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[transparent]]
+  [[transparent-37]]
     icon_bell = False
-    background_darkness = 0.33
+    background_darkness = 0.37
     background_type = transparent
     cursor_color = "#9141ac"
     font = agave Nerd Font Mono 16
@@ -57,6 +57,22 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
+  [[full-trasparent]]
+    icon_bell = False
+    background_darkness = 0
+    background_type = transparent
+    cursor_color = "#9141ac"
+    font = agave Nerd Font Mono 16
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#000000:#ed333b:#00cd00:#cdcd00:#1a5fb4:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#f66151:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    login_shell = True
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+
 [layouts]
   [[default]]
     [[[window0]]]

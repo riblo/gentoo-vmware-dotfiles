@@ -32,7 +32,8 @@ history_update_and_clean() { history -a; tac $HISTFILE | awk '!x[$0]++' | tac | 
 history_update() { history -a; history -c; history -r; }
 
 # append update_history to PROMPT_COMMAND in order to preserve it for autojumps
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history_update"
+#PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history_update"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;}"
 
 # Aliases
 # wrap the following commands for interactive use to avoid accidental file overwrites
@@ -54,6 +55,9 @@ alias df='grc df -h'
 # ssh && scp aliases
 alias ossh='ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no"'
 alias oscp='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
+
+# prince (temp)
+alias prince="/home/riblo/Downloads/SDLPoP-1.21/prince"
 
 # Misc
 # backend PS1 (overrided by starship)

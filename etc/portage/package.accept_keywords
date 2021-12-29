@@ -1,27 +1,24 @@
 # /etc/portage/package.accept_keywords
 
-# kernel sources
-sys-kernel/gentoo-sources ~amd64
-sys-kernel/zen-sources ~amd64
+# unofficial kernel sources
+sys-kernel/xanmod-sources ~amd64
 
 # mesa && deps (latest video drivers)
-#media-libs/mesa ~amd64
-#x11-libs/libdrm ~amd64
+media-libs/mesa ~amd64
+x11-libs/libdrm ~amd64
 
 # vmware tools
 app-emulation/open-vm-tools ~amd64
 
-# display-manager-init unlock
-=sys-apps/sysvinit-2.98-r1 ~amd64
-=x11-apps/xinit-1.4.1-r1 ~amd64
-=x11-base/xorg-server-1.20.10-r3 ~amd64
-=gui-libs/display-manager-init-1.0-r3 ~amd64
+# grub-costumizer
+app-admin/grub-customizer ~amd64
 
-# latest kde-plasma
-kde-plasma/* ~amd64
+# chromium
+=www-client/chromium-96.0.4664.45 ~amd64 
 
-# ocs-url
-#=x11-apps/ocs-url-3.1.0 ~amd64
+# vivaldi-snapshot
+www-client/vivaldi-snapshot ~amd64
+media-video/ffmpeg-chromium ~amd64
 
 # glmark2
 app-benchmarks/glmark2 ~amd64
@@ -30,31 +27,23 @@ app-benchmarks/glmark2 ~amd64
 app-shells/starship ~amd64
 
 # packer
-dev-util/packer ~amd64
+=dev-util/packer-1.7.2 ~amd64
 
 # ovftool
-dev-util/ovftool ~amd64
-
-# azure-cli && deps
-net-misc/azure-cli ~amd64
-dev-python/azure-* ~amd64
-dev-python/adal ~amd64
-dev-python/applicationinsights ~amd64
-dev-python/fabric ~amd64
-dev-python/invoke ~amd64
-dev-python/knack ~amd64
-dev-python/msal ~amd64
-dev-python/msal-extensions ~amd64
-dev-python/msrest ~amd64
-dev-python/msrestazure ~amd64
-dev-python/portalocker ~amd64
-dev-python/scp ~amd64
-dev-python/vsts ~amd64
-dev-python/vsts-cd-manager ~amd64
-=dev-python/jsondiff-1.3.0 ~amd64
+=dev-util/ovftool-4.4.0.16360108 ~amd64
 
 # visual studio code
 app-editors/visual-studio-code-bin ~amd64
+
+# ytfzf
+=net-misc/ytfzf-1.2.0_p20211208 ~amd64
+=media-gfx/ueberzug-18.1.9 ~amd64
+
+# jc
+dev-python/jc ~amd64
+
+# devour
+x11-misc/devour ~amd64
 
 # bat
 sys-apps/bat ~amd64
@@ -68,29 +57,20 @@ dev-util/git-delta ~amd64
 # plocate
 sys-apps/plocate ~amd64
 
-# jc
-dev-python/jc ~amd64
-
-#kuroo
+# kuroo
 app-portage/kuroo ~amd64
 
 # bpytop
 sys-process/bpytop ~amd64
 
-# edex-ui => BUG
+# edex-ui
 =net-libs/nodejs-8.15.1 ~amd64
-
-# alsaequal
-media-plugins/alsaequal ~amd64
 
 # pulseaudio-equalizer-ladspa
 media-sound/pulseaudio-equalizer-ladspa ~amd64
 
 # cava
 media-sound/cava ~amd64
-
-# thefuck 
-app-shells/thefuck
 
 # nerd fonts
 =media-fonts/nerd-fonts-2.1.0
@@ -110,11 +90,25 @@ games-misc/wtf ~amd64
 # terminus-ttf font
 media-fonts/terminus-ttf ~amd64
 
-# spotify
-media-sound/spotify ~amd64
+# asciiquarium
+games-misc/asciiquarium ~amd64
+dev-perl/Term-Animation ~amd64
 
 # supertux
 games-arcade/supertux ~amd64
 
+# eduke32
+games-fps/eduke32 ~amd64
+games-fps/duke3d-data ~amd64
+
+# prince of persia
+games-arcade/SDLPoP
+
 # mangohud
 games-util/mangohud ~amd64
+
+# bettercap
+net-analyzer/bettercap ~amd64
+
+# cheat
+app-misc/cheat ~amd64

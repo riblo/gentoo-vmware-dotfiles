@@ -1,3 +1,7 @@
+
+KVER="5.15.11"
+LVER="$(cat localversion)"
+
 # Change kernel
 # eselect kernel set <N>
 
@@ -23,7 +27,7 @@ LLVM=1 LLVM_IAS=1 make -j$(nproc) modules_install
 LLVM=1 LLVM_IAS=1 make -j$(nproc) install
 
 # Create initramfs
-dracut --kver 5.15.11-xanmod-LLVM-ThinLTO-preempt-x86_64 /boot/initramfs-5.15.11-xanmod-LLVM-ThinLTO-preempt-x86_64.img --force
+dracut --kver $KVER-$LVER-x86_64 /boot/initramfs-$KVER-$LVER-x86_64.img --force
 
 # Update grub2
 grub-mkconfig -o /boot/grub/grub.cfg

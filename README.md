@@ -21,7 +21,10 @@
 - [package files](https://wiki.gentoo.org/wiki/Handbook:Parts/Portage/Files#User-specific_configuration)
 - [clang](https://wiki.gentoo.org/wiki/Clang) compiler for *LLVM* alternative toolchain
 -  ~~Removed unuseful [ccache](https://ccache.dev/) conf~~, mounted [Portage_TMPDIR_on_tmpfs](https://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs)
-- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the stable rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and an experimental one for ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/), compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO in order to have the best Desktop performance (thanks to https://github.com/owl4ce/kurisu-x86_64)
+
+## Kernel confiurations
+- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources), for ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/) and [liquorix-sources](https://liquorix.net/)
+- *Xanmod* and *Liquorix* sources are intended to be compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO (*Liquorix* .config also enable PDS and BFQ as CPU and IO schedulers) in order to have the best Desktop performance (thanks to https://github.com/owl4ce/kurisu-x86_64)
 
 ## Installation
 Clone, review the needed code and **use at your own risk!**

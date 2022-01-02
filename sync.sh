@@ -5,6 +5,7 @@ cp -vf ~/.bash_logout home/bash_logout
 cp -vf ~/.bash_profile home/bash_profile
 cp -vf ~/.bashrc home/bashrc
 cp -vf ~/.blerc home/blerc
+cp -vf ~/.vimrc home/vimrc
 cp -vf ~/.config/cava/config home/config/cava/config
 cp -vf ~/.config/htop/htoprc home/config/htop/htoprc
 cp -vf ~/.config/starship.toml home/config/starship.toml

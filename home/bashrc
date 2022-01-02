@@ -66,6 +66,10 @@ PS1='\[\033[01;37m\][\u\[\033[32m\]@\[\033[01;37m\]$(hostname -f):\[\033[01;37m\
 # enable autojump
 source /etc/profile.d/autojump.sh
 
+# fortune
+#fortune | cowthink -d | toilet -f term --gay
+fortune | cowthink -d
+
 # enable starship
 eval "$(starship init bash)"
 

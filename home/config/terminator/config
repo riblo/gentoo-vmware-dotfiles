@@ -59,7 +59,7 @@
     copy_on_selection = True
   [[full-trasparent]]
     icon_bell = False
-    background_darkness = 0
+    background_darkness = 0.0
     background_type = transparent
     cursor_color = "#9141ac"
     font = agave Nerd Font Mono 16
@@ -72,7 +72,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-
 [layouts]
   [[default]]
     [[[window0]]]

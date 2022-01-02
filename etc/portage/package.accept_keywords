@@ -2,6 +2,7 @@
 
 # unofficial kernel sources
 sys-kernel/xanmod-sources ~amd64
+=sys-kernel/liquorix-sources-5.15.11 ~amd64
 
 # mesa && deps (latest video drivers)
 media-libs/mesa ~amd64
@@ -25,6 +26,9 @@ app-benchmarks/glmark2 ~amd64
 
 # starship
 app-shells/starship ~amd64
+
+# latte-dock
+kde-misc/latte-dock ~amd64
 
 # packer
 =dev-util/packer-1.7.2 ~amd64
@@ -80,6 +84,9 @@ app-misc/linux-logo ~amd64
 
 # cowsay
 games-misc/cowsay ~amd64
+
+# ponysay
+games-misc/ponysay ~amd64
 
 # fortune-mod-it
 games-misc/fortune-mod-it ~amd64

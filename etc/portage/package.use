@@ -1,5 +1,8 @@
 # /etc/portage/package.use
 
+# openrc
+sys-apps/openrc -netifrc
+
 # eudev block
 sys-apps/hwids -udev
 
@@ -80,6 +83,9 @@ dev-libs/libcdio minimal
 # kismet 
 net-wireless/kismet libusb
 >=net-libs/libwebsockets-4.1.6 client
+
+# screen
+app-misc/screen nethack
 
 # eduke32
 games-fps/eduke32 duke3d fluidsynth psx sc-55 voxels

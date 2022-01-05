@@ -12,7 +12,7 @@ cp -vf ~/.config/starship.toml home/config/starship.toml
 cp -vf ~/.config/terminator/config home/config/terminator/config
 cp -vf ~/.config/latte/gentoo-3-docks_riblo_0.1.layout.latte home/config/latte/gentoo-3-docks_riblo_0.1.layout.latte
 cp -vf ~/.inputrc home/inputrc
-cp -vfr ~/scripts/ home/scripts/
+cp -vfr ~/scripts/ .
 #cp -vf ~/.gitconfig home/gitconfig
 
 # etc

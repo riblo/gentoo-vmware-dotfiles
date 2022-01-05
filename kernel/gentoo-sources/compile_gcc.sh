@@ -1,5 +1,10 @@
+#!/bin/bash
+
+KVER="5.15.11"
+LVER="$(cat localversion)"
+
 # Change kernel
-eselect kernel set <N>
+# eselect kernel set <N>
 
 # Mount /boot
 mount /boot
@@ -23,8 +28,15 @@ make -j$(nproc) modules_install
 make -j$(nproc) install
 
 # Create initramfs
-dracut --kver 5.15.11-gentoo-preempt-x86_64 /boot/initramfs-5.15.11-gentoo-preempt-x86_64.img --force
-
+dracut --kver $KVER-$LVER-x86_64 /boot/initramfs-$KVER-$LVER-x86_64.img --force
 
 # Update grub2
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Disable cfs zen tweaks
+rc-update del set-cfs-tweaks boot
+rc-service set-cfs-tweaks stop
+
+# Update & patch linux-logo
+rc-service linux-logo restart
+sed -i 's/|/ /g; /+-/d' $(ls -1 /etc/issue /etc/issue.net)

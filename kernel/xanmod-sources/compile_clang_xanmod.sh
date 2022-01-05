@@ -31,3 +31,11 @@ dracut --kver $KVER-$LVER-x86_64 /boot/initramfs-$KVER-$LVER-x86_64.img --force
 
 # Update grub2
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Enable cfs zen tweaks
+rc-update add set-cfs-tweaks boot
+rc-service set-cfs-tweaks start
+
+# Update & patch linux-logo
+rc-service linux-logo restart
+sed -i 's/|/ /g; /+-/d' $(ls -1 /etc/issue /etc/issue.net)

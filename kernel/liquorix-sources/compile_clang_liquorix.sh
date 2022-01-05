@@ -36,3 +36,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # Disable cfs zen tweaks
 rc-update del set-cfs-tweaks boot
 rc-service set-cfs-tweaks stop
+
+# Update & patch linux-logo
+rc-service linux-logo restart
+sed -i 's/|/ /g; /+-/d' $(ls -1 /etc/issue /etc/issue.net)

@@ -3,6 +3,9 @@
 # openrc
 sys-apps/openrc -netifrc
 
+# NetworkManager 
+net-misc/networkmanager conchek connection-sharing -dhclient iptables -ppp resolvconf syslog
+
 # eudev block
 sys-apps/hwids -udev
 
@@ -64,9 +67,10 @@ media-sound/alsa-utils bat
 # pulseaudio 
 media-sound/pulseaudio equalizer realtime system-wide
 
-# pulseffects extra
-media-sound/pulseeffects bs2b calf mda-lv2 rubberband
->=media-plugins/calf-0.90.3-r1 lv2
+# pulseffects and deps
+media-sound/pulseeffects bs2b calf rnnoise rubberband zamaudio
+media-plugins/calf lv2
+media-libs/rubberband ladspa
 
 # qemu stuffs
 app-emulation/qemu spice ssh

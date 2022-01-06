@@ -28,9 +28,18 @@ cpu_t1_total=$((${cpu_t1_values// /+}))
 total_d=$((cpu_t1_total - cpu_t0_total))
 idle_d=$((cpu_t1[4] - cpu_t0[4]))
 
-# CPU Percentage
-printf " CPU: %.1f%%" "$(awk "BEGIN {print ($total_d - $idle_d)/$total_d*100}")"
+# CPU Percentage with static
+cpu_perc=$(printf "%.1f%" "$(awk "BEGIN {print ($total_d - $idle_d)/$total_d*100}")")
+
+if [ ${#cpu_perc} -lt 4 ]; then
+    printf "CPU:  %.1f%% | " "$cpu_perc"
+elif [ ${#cpu_perc} -lt 5 ]; then
+    printf "CPU: %.1f%% | " "$cpu_perc"
+else
+    printf "CPU: 100%%  | " "$cpu_perc"
+fi
+
 # RAM Percentage
-awk '/MemTotal/{t=$2}/MemAvailable/{a=$2}END{printf " | RAM: %.1f% | ", 100-100*a/t}' /proc/meminfo;
+awk '/MemTotal/{t=$2}/MemAvailable/{a=$2}END{printf "RAM: %.1f% | ", 100-100*a/t}' /proc/meminfo;
 # HDD Percentage
 df /dev/sda3 | awk '/ \/$/{printf "HDD: %s ", $5}'

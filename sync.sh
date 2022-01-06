@@ -6,17 +6,19 @@ cp -vf ~/.bash_profile home/bash_profile
 cp -vf ~/.bashrc home/bashrc
 cp -vf ~/.blerc home/blerc
 cp -vf ~/.vimrc home/vimrc
-cp -vf ~/.config/cava/config home/config/cava/config
-cp -vf ~/.config/htop/htoprc home/config/htop/htoprc
-cp -vf ~/.config/starship.toml home/config/starship.toml
-cp -vf ~/.config/terminator/config home/config/terminator/config
-cp -vf ~/.config/latte/gentoo-3-docks_riblo_0.1.layout.latte home/config/latte/gentoo-3-docks_riblo_0.1.layout.latte
+cp -vf ~/.config/cava/config home/config/cava/
+cp -vf ~/.config/htop/htoprc home/config/htop/
+cp -vf ~/.config/starship.toml home/config/
+cp -vf ~/.config/terminator/config home/config/terminator/
+cp -vf ~/.config/latte/gentoo-3-docks_v0.2.layout.latte home/config/latte/
 cp -vf ~/.inputrc home/inputrc
-cp -vfr ~/scripts/ .
 #cp -vf ~/.gitconfig home/gitconfig
 
 # etc
-cp -vf /etc/dracut.conf etc/dracut.conf
-cp -vf /etc/portage/make.conf etc/portage/make.conf
+cp -vf /etc/dracut.conf etc/
+cp -vf /etc/portage/make.conf etc/portage/
 cp -vf /etc/portage/package.* etc/portage/
 cp -vrf /etc/portage/env etc/portage/
+
+# scripts
+cp -vfr ~/scripts/ .

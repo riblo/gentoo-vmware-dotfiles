@@ -6,13 +6,14 @@ cp -vf ~/.bash_profile home/bash_profile
 cp -vf ~/.bashrc home/bashrc
 cp -vf ~/.blerc home/blerc
 cp -vf ~/.vimrc home/vimrc
+cp -vf ~/.inputrc home/inputrc
+#cp -vf ~/.gitconfig home/gitconfig
 cp -vf ~/.config/cava/config home/config/cava/
 cp -vf ~/.config/htop/htoprc home/config/htop/
 cp -vf ~/.config/starship.toml home/config/
 cp -vf ~/.config/terminator/config home/config/terminator/
 cp -vf ~/.config/latte/gentoo-3-docks_v0.2.layout.latte home/config/latte/
-cp -vf ~/.inputrc home/inputrc
-#cp -vf ~/.gitconfig home/gitconfig
+cp -vf ~/.config/kitty/kitty.conf home/config/kitty/
 
 # etc
 cp -vf /etc/dracut.conf etc/

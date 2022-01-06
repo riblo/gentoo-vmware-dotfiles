@@ -131,8 +131,8 @@ gradient_color_2 = '#ff3399'
 ; integral = 70
 
 # Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable.
-; monstercat = 1;
-; waves = 1;
+ ;monstercat = 1;
+ ;waves = 1;
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".

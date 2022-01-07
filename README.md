@@ -2,15 +2,14 @@
 
 <p align="center"><img src="./demo/screen.png" alt="screenshot"/></p>
 
-![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
 
-## My "eye-candy" bash dotfiles supports:
-- [latte-dock](https://invent.kde.org/plasma/latte-dock) conf: 3 docks with on-demand monitoring left dock (can be disabled)
+## My "eye-candy" dotfiles supports:
+- [latte-dock](https://invent.kde.org/plasma/latte-dock) conf with "on-demand" monitoring right dock
 - [terminator](https://terminator-gtk3.readthedocs.io/) conf
 - [starship](https://starship.rs/) conf
 - custom syntax highlighting and enhanced completion (like *fish*) with [ble.sh](https://github.com/akinomyoga/ble.sh)
 - [htop](https://htop.dev/) conf with cpu load graph
-- [cava](https://github.com/karlstav/cava) conf with blue/purple gradient
+- [cava](https://github.com/karlstav/cava) updated conf with blue/purple gradient
 - [kitty](https://sw.kovidgoyal.net/kitty/) conf for smoother cava running
 - useful [shopt](https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html) behaviors and aliases
 - shared/cleaned *history* between terminals (see **References**)
@@ -18,20 +17,23 @@
 - better colorized output with [grc](https://github.com/garabik/grc)
 - *gitconfig* with [delta](https://github.com/dandavison/delta) highlight enabled
 
+![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
+
 ## My Gentoo stuffs:
 - [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player* with custom FEATURES, MAKEOPTS, etc for *Portage* parallel package builds
-- [Clang](https://wiki.gentoo.org/wiki/Clang) compiler for *LLVM* alternative toolchain, able to compile *>Linux 5.12 Kernel* with "Clang LTO support" enabled
+- [Clang](https://wiki.gentoo.org/wiki/Clang) compiler for *LLVM* alternative toolchain, able to compile *>= Linux 5.12 Kernel* with "Clang LTO support" enabled
 - [package.env](https://wiki.gentoo.org/wiki//etc/portage/package.env) for [overriding environment per package](https://wiki.gentoo.org/wiki/Knowledge_Base:Overriding_environment_variables_per_package)
 - [custom cflags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) per package build optimization (see **References**)
 - [package files](https://wiki.gentoo.org/wiki/Handbook:Parts/Portage/Files#User-specific_configuration)
 -  ~~Removed unuseful [ccache](https://ccache.dev/) conf~~, mounted [Portage_TMPDIR_on_tmpfs](https://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs)
 
 ## Kernel configurations
-- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources), for ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/) and [liquorix-sources](https://liquorix.net/)
-- *Xanmod* and *Liquorix* sources are intended to be compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO (*Liquorix* .config also enable PDS and BFQ as CPU and IO schedulers) in order to have the best Desktop performance (thanks to https://github.com/owl4ce/kurisu-x86_64)
+- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and for desktop oriented ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/) and [liquorix-sources](https://liquorix.net/)
+- *Xanmod* and *Liquorix* sources are intended to be compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO (*Liquorix* .config also enable PDS and BFQ as CPU and IO schedulers) in order to have the best desktop performance 
+- *Liquorix* has also "Zen Interactive Tuning" built-in, *Xanmod* need runtime "cfs-zen-tweaks" (thanks to https://github.com/owl4ce/cfs-zen-tweaks-openrc)
 
 ## Scripts
-- fast "cpu, ram and disk monitoring" script for  [command output](https://store.kde.org/p/1166510/) applet (I don't like the default bloated one)
+- fast "cpu, ram and disk monitoring" script for  [command output](https://store.kde.org/p/1166510/) applet (I don't like the default graph/bloated, if graphs are needed can be activated "on-demand" on the right dock)
 - mousewheel for smoother scroll
 
 ## VMware Tweaks

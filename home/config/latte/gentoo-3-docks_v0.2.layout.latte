@@ -5,7 +5,7 @@ RightButton;NoModifier=org.kde.latte.contextmenu
 activityId=
 byPassWM=true
 dockWindowBehavior=true
-enableKWinEdges=false
+enableKWinEdges=true
 formfactor=2
 immutability=1
 isPreferredForShortcuts=false
@@ -57,7 +57,7 @@ PreloadWeight=0
 [Containments][1][Applets][67][Configuration][General]
 isInLatteDock=true
 isPreferredForDroppedLaunchers=false
-launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:code.desktop,applications:terminator.desktop,applications:chromium-browser-chromium.desktop,applications:vivaldi-snapshot.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
+launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:code.desktop,applications:terminator.desktop,applications:chromium-browser-chromium.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
 manualScrollTasksType=Disabled
 showOnlyCurrentActivity=false
 
@@ -66,7 +66,7 @@ immutability=1
 plugin=org.kde.plasma.kickerdash
 
 [Containments][1][Applets][72][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][1][Applets][72][Configuration][ConfigDialog]
 DialogHeight=682
@@ -89,8 +89,8 @@ PreloadWeight=0
 advanced=false
 alignmentUpgraded=true
 appletOrder=72;67;108
-backgroundRadius=34
-backgroundShadowSize=8
+appletShadowsEnabled=false
+backgroundRadius=35
 durationTime=x1
 hideFloatingGapForMaximized=true
 iconSize=54
@@ -99,8 +99,9 @@ maxLength=73
 mouseWheelActions=false
 panelShadows=false
 panelSize=100
-panelTransparency=70
+panelTransparency=80
 screenEdgeMargin=8
+shadowColorType=Theme
 shadowOpacity=20
 shadows=All
 shadowsUpgraded=true
@@ -108,7 +109,6 @@ showGlow=false
 splitterPosition=1
 splitterPosition2=4
 tasksUpgraded=true
-themeColors=SmartThemeColors
 thickMargin=15
 titleTooltips=false
 userBlocksColorizingApplets=72;108
@@ -120,7 +120,7 @@ enabled=true
 type=org.kde.latte.default
 
 [Containments][1][Indicator][org.kde.latte.default][General]
-backgroundCornerMargin=0.34
+backgroundCornerMargin=0.37
 enabledForApplets=false
 extraDotOnActive=true
 lengthPadding=0.05
@@ -280,10 +280,10 @@ advanced=true
 alignment=10
 alignmentUpgraded=true
 appletOrder=131;130;132;133
+appletShadowsEnabled=false
 autoDecreaseIconSize=false
 autoSizeEnabled=false
-backgroundRadius=34
-blurEnabled=false
+backgroundRadius=35
 configurationSticker=true
 durationTime=x1
 iconSize=190
@@ -294,9 +294,10 @@ maxLength=83
 mouseWheelActions=false
 panelPosition=10
 panelSize=100
-panelTransparency=70
+panelTransparency=80
 screenEdgeMargin=25
-shadowOpacity=25
+shadowColorType=Theme
+shadowOpacity=20
 shadows=None
 shadowsUpgraded=true
 splitterPosition=1
@@ -378,6 +379,7 @@ command=/home/riblo/scripts/get_hw_usage.sh 0.5
 fontFamily=agave NF
 interval=500
 textAlign=8
+textColor=#ffffff
 
 [Containments][7][Applets][11]
 immutability=1
@@ -486,6 +488,37 @@ DialogWidth=880
 containmentType=Latte
 lengthPixels=7
 
+[Containments][7][Applets][146]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][7][Applets][146][Configuration][General]
+containmentType=Latte
+
+[Containments][7][Applets][147]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][7][Applets][147][Configuration][ConfigDialog]
+DialogHeight=682
+DialogWidth=880
+
+[Containments][7][Applets][147][Configuration][General]
+containmentType=Latte
+lengthPixels=7
+
+[Containments][7][Applets][148]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][7][Applets][148][Configuration][ConfigDialog]
+DialogHeight=682
+DialogWidth=880
+
+[Containments][7][Applets][148][Configuration][General]
+containmentType=Latte
+lengthPixels=7
+
 [Containments][7][Applets][19]
 immutability=1
 plugin=org.kde.plasma.betterinlineclock
@@ -590,7 +623,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][7][Applets][92][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 SystrayContainmentId=93
 
 [Containments][7][Configuration]
@@ -599,26 +632,27 @@ PreloadWeight=0
 [Containments][7][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=107;39;40;19;109;141;112;144;92;143;136
-backgroundRadius=34
-backgroundShadowSize=8
+appletOrder=147;107;39;40;19;146;109;141;112;144;92;148;136;143
+appletShadowsEnabled=false
+backgroundRadius=37
 configurationSticker=true
 dragActiveWindowEnabled=true
 durationTime=x1
 hideFloatingGapForMaximized=true
 iconSize=28
+inConfigureAppletsMode=true
 maxLength=98
 mouseWheelActions=false
 panelSize=100
 panelTransparency=70
 plasmaBackgroundForPopups=true
 screenEdgeMargin=8
+shadowColorType=Theme
 shadowOpacity=20
-shadowSize=40
 shadowsUpgraded=true
 solidBackgroundForMaximized=true
-splitterPosition=4
-splitterPosition2=6
+splitterPosition=5
+splitterPosition2=8
 tasksUpgraded=true
 thickMargin=11
 titleTooltips=false
@@ -662,6 +696,9 @@ PreloadWeight=0
 [Containments][93][Applets][145]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
+
+[Containments][93][Applets][145][Configuration]
+PreloadWeight=42
 
 [Containments][93][Applets][94]
 immutability=1

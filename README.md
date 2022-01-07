@@ -3,18 +3,18 @@
 ![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
 
 ## My "eye-candy" bash dotfiles supports:
-- [latte-dock](https://invent.kde.org/plasma/latte-dock) custom conf: 3 docks with on-demand monitoring left dock (can be disabled)
+- [latte-dock](https://invent.kde.org/plasma/latte-dock) conf: 3 docks with on-demand monitoring left dock (can be disabled)
 - [terminator](https://terminator-gtk3.readthedocs.io/) conf
-- [starship](https://starship.rs/) custom prompt
+- [starship](https://starship.rs/) conf
 - custom syntax highlighting and enhanced completion (like *fish*) with [ble.sh](https://github.com/akinomyoga/ble.sh)
-- useful [shopt](https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html) behaviors and aliases
-- shared/cleaned *history* between terminals (see **References**)
-- *cd* improved with [autojump](https://github.com/wting/autojump)
-- better colorized output with  [grc](https://github.com/garabik/grc)
-- *gitconfig* with [delta](https://github.com/dandavison/delta) highlight enabled
 - [htop](https://htop.dev/) conf with cpu load graph
 - [cava](https://github.com/karlstav/cava) conf with blue/purple gradient
 - [kitty](https://sw.kovidgoyal.net/kitty/) conf for smoother cava running
+- useful [shopt](https://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html) behaviors and aliases
+- shared/cleaned *history* between terminals (see **References**)
+- *cd* improved with [autojump](https://github.com/wting/autojump)
+- better colorized output with [grc](https://github.com/garabik/grc)
+- *gitconfig* with [delta](https://github.com/dandavison/delta) highlight enabled
 
 ## My Gentoo stuffs:
 - [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player* with custom FEATURES, MAKEOPTS, etc for *Portage* parallel package builds

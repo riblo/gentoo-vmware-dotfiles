@@ -1,5 +1,7 @@
 # dotfiles-gentoo
 
+<p align="center"><img src="./demo/screen.png" alt="screenshot"/></p>
+
 ![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
 
 ## My "eye-candy" bash dotfiles supports:

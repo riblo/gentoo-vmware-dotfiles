@@ -39,6 +39,9 @@ kde-misc/latte-dock ~amd64
 # visual studio code
 app-editors/visual-studio-code-bin ~amd64
 
+# github-cli
+dev-util/github-cli ~amd64
+
 # ytfzf
 =net-misc/ytfzf-1.2.0_p20211208 ~amd64
 =media-gfx/ueberzug-18.1.9 ~amd64

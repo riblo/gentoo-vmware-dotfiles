@@ -1,9 +1,11 @@
-# dotfiles-gentoo
+# gentoo-vmware-dotfiles
+
+Highly responsive **Gentoo** plasma desktop on *VMware* virtual machine:  
 
 <p align="center"><img src="./demo/screen.png" alt="screenshot"/></p>
 
 
-## My "eye-candy" dotfiles supports:
+## My "eye-candy" dotfiles include:
 - [latte-dock](https://invent.kde.org/plasma/latte-dock) conf with "on-demand" monitoring right dock
 - [terminator](https://terminator-gtk3.readthedocs.io/) conf
 - [starship](https://starship.rs/) conf
@@ -19,8 +21,8 @@
 
 ![Demo](https://github.com/riblo/dotfiles-gentoo/blob/main/demo/demo.gif)
 
-## My Gentoo stuffs:
-- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) for gentoo vm running on *vmware workstation player* with custom FEATURES, MAKEOPTS, etc for *Portage* parallel package builds
+## My Gentoo stuffs
+- [make.conf](https://wiki.gentoo.org/wiki//etc/portage/make.conf) with custom FEATURES, MAKEOPTS, etc for *Portage* parallel package builds
 - [Clang](https://wiki.gentoo.org/wiki/Clang) compiler for *LLVM* alternative toolchain, able to compile *>= Linux 5.12 Kernel* with "Clang LTO support" enabled
 - [package.env](https://wiki.gentoo.org/wiki//etc/portage/package.env) for [overriding environment per package](https://wiki.gentoo.org/wiki/Knowledge_Base:Overriding_environment_variables_per_package)
 - [custom cflags](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) per package build optimization (see **References**)
@@ -28,15 +30,15 @@
 -  ~~Removed unuseful [ccache](https://ccache.dev/) conf~~, mounted [Portage_TMPDIR_on_tmpfs](https://wiki.gentoo.org/wiki/Portage_TMPDIR_on_tmpfs)
 
 ## Kernel configurations
-- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and for desktop oriented ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [xanmod-sources](https://xanmod.org/) and [liquorix-sources](https://liquorix.net/)
-- *Xanmod* and *Liquorix* sources are intended to be compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO (*Liquorix* .config also enable PDS and BFQ as CPU and IO schedulers) in order to have the best desktop performance 
-- *Liquorix* has also "Zen Interactive Tuning" built-in, *Xanmod* need runtime "cfs-zen-tweaks" (thanks to https://github.com/owl4ce/cfs-zen-tweaks-openrc)
+- [.config](https://www.kernel.org/doc/html/latest/kbuild/makefiles.html?highlight=config%20file#overview) files for the rock-solid [gentoo-sources](https://packages.gentoo.org/packages/sys-kernel/gentoo-sources) and for desktop oriented ~~[zen-sources](https://github.com/zen-kernel/zen-kernel)~~ [liquorix-sources](https://liquorix.net/) and [xanmod-sources](https://xanmod.org/)
+- *Liquorix* and *Xanmod* sources are intended to be compiled with *Clang/LLVM* toolchain and optimized by *-O3* and *Link Time Optimization* ThinLTO (*Liquorix* .config also enable *PDS* and *BFQ* as CPU and IO schedulers) in order to have the best desktop performance 
+- *Liquorix* has also "Zen Interactive Tuning" built-in, *Xanmod* (and all the CFS kernel) could use the runtime "cfs-zen-tweaks" (thanks to https://github.com/owl4ce/cfs-zen-tweaks-openrc for [OpenRC](https://github.com/OpenRC/openrc) porting)
 
 ## Scripts
 - fast "cpu, ram and disk monitoring" script for  [command output](https://store.kde.org/p/1166510/) applet (I don't like the default graph/bloated, if graphs are needed can be activated "on-demand" on the right dock)
 - mousewheel for smoother scroll
 
-## VMware Tweaks
+## VMware tweaks
 - [.vmx](https://kb.vmware.com/s/article/2057902) file with custom options that fixes low-resolution issues and add performance improvement    
 - [.ps1](https://docs.microsoft.com/it-it/powershell/scripting/overview?view=powershell-7.2) script to be added into "VMware Player" shortcut, in order to fix *svga.guestBackedPrimaryAware="TRUE"* bug every time the player is started 
 
@@ -52,6 +54,7 @@ Clone, review the needed code and __*use at your own risk!*__
 - debloat/improve kernel configurations
 - try to improve audio latency, playing with [jack](https://github.com/jackaudio) or [pipewire](https://pipewire.org/)
 - [JFF] try to resurrect [fbsplash](https://wiki.gentoo.org/wiki/Fbsplash)
+
 ## References
 
 #### history improvements && .bashrc stuffs

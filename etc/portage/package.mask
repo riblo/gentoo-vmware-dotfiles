@@ -7,6 +7,6 @@
 >sys-kernel/gentoo-sources-5.15.11
 >sys-kernel/xanmod-sources-5.15.11
 
-# Plasma 5.22.5 version block - windows switcher issue
+# Plasma 5.22.5 version lock - windows switcher issue
 kde-plasma/*
 kde-frameworks/*

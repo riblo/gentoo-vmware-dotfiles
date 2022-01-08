@@ -7,6 +7,7 @@ cp -vf ~/.bashrc home/bashrc
 cp -vf ~/.blerc home/blerc
 cp -vf ~/.vimrc home/vimrc
 cp -vf ~/.inputrc home/inputrc
+cp -vf ~/.imwheelrc home/imwheelrc
 #cp -vf ~/.gitconfig home/gitconfig
 cp -vf ~/.config/cava/config home/config/cava/
 cp -vf ~/.config/htop/htoprc home/config/htop/

@@ -2,7 +2,7 @@
 
 # unofficial kernel sources
 sys-kernel/xanmod-sources ~amd64
-=sys-kernel/liquorix-sources-5.15.11 ~amd64
+sys-kernel/liquorix-sources ~amd64
 
 # mesa && deps (latest video drivers)
 media-libs/mesa ~amd64
@@ -14,8 +14,8 @@ app-emulation/open-vm-tools ~amd64
 # grub-costumizer
 app-admin/grub-customizer ~amd64
 
-# chromium
-=www-client/chromium-96.0.4664.45 ~amd64 
+# kde-plasma 5.24
+kde-plasma/* ~amd64
 
 # vivaldi-snapshot
 www-client/vivaldi-snapshot ~amd64
@@ -27,14 +27,17 @@ app-benchmarks/glmark2 ~amd64
 # starship
 app-shells/starship ~amd64
 
+# vim - dracula theme
+app-vim/dracula ~amd64
+
 # latte-dock
 kde-misc/latte-dock ~amd64
 
 # packer
-=dev-util/packer-1.7.2 ~amd64
+=dev-util/packer-1.7.2 
 
 # ovftool
-=dev-util/ovftool-4.4.0.16360108 ~amd64
+=dev-util/ovftool-4.4.0.16360108 
 
 # visual studio code
 app-editors/visual-studio-code-bin ~amd64
@@ -42,9 +45,9 @@ app-editors/visual-studio-code-bin ~amd64
 # github-cli
 dev-util/github-cli ~amd64
 
-# ytfzf
-=net-misc/ytfzf-1.2.0_p20211208 ~amd64
-=media-gfx/ueberzug-18.1.9 ~amd64
+# ytfzf stable
+=net-misc/ytfzf-1.2.0 
+=media-gfx/ueberzug-18.1.9 
 
 # jc
 dev-python/jc ~amd64
@@ -71,10 +74,7 @@ app-portage/kuroo ~amd64
 sys-process/bpytop ~amd64
 
 # edex-ui
-=net-libs/nodejs-8.15.1 ~amd64
-
-# pulseaudio-equalizer-ladspa
-media-sound/pulseaudio-equalizer-ladspa ~amd64
+=net-libs/nodejs-8.15.1
 
 # cava
 media-sound/cava ~amd64
@@ -112,7 +112,7 @@ games-fps/eduke32 ~amd64
 games-fps/duke3d-data ~amd64
 
 # prince of persia
-games-arcade/SDLPoP
+games-arcade/SDLPoP ~amd64
 
 # mangohud
 games-util/mangohud ~amd64

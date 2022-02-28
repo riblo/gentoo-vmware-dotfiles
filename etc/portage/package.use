@@ -1,15 +1,6 @@
 # /etc/portage/package.use
 
-# openrc
-sys-apps/openrc -netifrc
-
-# NetworkManager 
-net-misc/networkmanager conchek connection-sharing -dhclient iptables -ppp resolvconf syslog
-
-# eudev block
-sys-apps/hwids -udev
-
-# unlock PYTHON
+# lock/unlock PYTHON TARGETS
 #*/* PYTHON_TARGETS: -* python3_8 python3_9
 #*/* PYTHON_SINGLE_TARGET: -* python3_8
 #*/* PYTHON_TARGETS: -* python3_9
@@ -20,76 +11,106 @@ sys-devel/clang default-compiler-rt default-lld llvm-libunwind
 sys-libs/compiler-rt clang
 sys-libs/compiler-rt-sanitizers clang
 
-# update
-# required by x11-libs/pango-1.48.7::gentoo
-# required by gnome-base/librsvg-2.50.7::gentoo
-# required by media-gfx/imagemagick-7.1.0.0::gentoo[svg]
-# required by app-misc/neofetch-7.1.0::gentoo[X]
-# required by @selected
-# required by @world (argument)
->=net-misc/spice-gtk-0.37-r3 usbredir
-# required by app-emulation/virt-manager-3.2.0::gentoo[gtk]
-# required by @selected
-# required by @world (argument)
->=media-libs/freetype-2.10.4 harfbuzz
+# open-vm-tools
+app-emulation/open-vm-tools gtkmm
 
-# libseccomp requirement
-sys-libs/libseccomp static-libs
-
-# required for root operations in plasma
-kde-plasma/kde-cli-tools kdesu X
-
-# required by layman
+# layman
 app-portage/layman sync-plugin-portage git
 
+# openrc
+sys-apps/openrc -netifrc
+
+# syslog-ng
+app-admin/syslog-ng geoip2
+
+# NetworkManager 
+net-misc/networkmanager conchek connection-sharing -dhclient iptables -ppp syslog
+
+# mesa 
+media-libs/mesa osmesa
+
+# kwin
+kde-plasma/kwin multimedia
+
+# mesa (wayland forced by kwin) 
+media-libs/mesa wayland
+
+# libdrm (libkms forced by xf86-video-vmware)
+x11-libs/libdrm libkms
+
+# freetype
+media-libs/freetype harfbuzz
+
+# nerd-fonts fonts
+media-fonts/nerd-fonts terminus agave victormono
+
+# vim
+app-editors/vim terminal
+
+# screen
+app-misc/screen nethack
+
+#curl
+net-misc/curl ssh 
+
+# youtube-dl
+net-misc/youtube-dl -yt-dlp
+
+# nmap 
+net-analyzer/nmap ncat nping libssh2
+
+# libcaca
+media-libs/libcaca imlib slang
+
+# mpv
+media-video/mpv libcaca
+
+# mpv dep
+dev-libs/libcdio minimal
+
+# ffmpeg
+media-video/ffmpeg chromium libdrm libcaca ssh
+
+# libsdl
+media-libs/libsdl libcaca
+
 # chromium 
-www-client/chromium official proprietary-codecs
-# required by www-client/chromium-96.0.4664.45::gentoo
-# required by @selected
-# required by @world (argument)
->=net-libs/nodejs-14.17.6 inspector
+www-client/chromium official proprietary-codecs -hangouts system-ffmpeg
+
+# nodejs (chromium deps)
+net-libs/nodejs inspector
 
 # vivaldi 
 www-client/vivaldi-snapshot proprietary-codecs
 
-# nmap 
-net-analyzer/nmap ncat nping
+# plasma requirement
+kde-plasma/plasma-meta browser-integration colord 
+
+# required for root operations in plasma
+kde-plasma/kde-cli-tools kdesu X
 
 # zip support 
 kde-apps/ark zip
 
-# nerd-fonts fonts
-media-fonts/nerd-fonts terminus agave victormono
+# ocular
+kde-apps/okular epub markdown
+
+# remmina
+net-misc/remmina rdp ssh vnc
 
 # extra/testing by cava
 media-sound/alsa-utils bat
 
 # pulseaudio 
-media-sound/pulseaudio equalizer realtime system-wide
+media-sound/pulseaudio equalizer realtime system-wide sox
 
 # pulseffects and deps
 media-sound/pulseeffects bs2b calf rnnoise rubberband zamaudio
 media-plugins/calf lv2
 media-libs/rubberband ladspa
 
-# qemu stuffs
-app-emulation/qemu spice ssh
-=net-misc/spice-gtk-0.37-r2 usbredir
->=dev-libs/libpcre2-10.35 pcre32
-# required by app-emulation/libvirt-7.0.0-r2::gentoo[virt-network]
-# required by @selected
-# required by @world (argument)
->=net-dns/dnsmasq-2.85 script
-
-# mpv dep
-dev-libs/libcdio minimal
-
-# kismet 
-net-wireless/kismet libusb
->=net-libs/libwebsockets-4.1.6 client
-
-# screen
-app-misc/screen nethack
+# irssi
+net-irc/irssi otr
 
 # eduke32
 games-fps/eduke32 duke3d fluidsynth psx sc-55 voxels
@@ -97,27 +118,8 @@ games-fps/eduke32 duke3d fluidsynth psx sc-55 voxels
 games-fps/duke3d-data demo
 >=media-libs/sdl2-mixer-2.0.4 fluidsynth midi
 
-# required by dev-python/pyzmq-20.0.0::gentoo[-test]
-# required by dev-python/jupyter_client-6.1.11::gentoo
-# required by dev-python/qtconsole-5.0.2::gentoo
-# required by dev-python/ipython-7.21.0-r1::gentoo[qt5]
-# required by dev-python/ipykernel-5.5.0::gentoo[-test]
-# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
->=net-libs/zeromq-4.3.3-r1 drafts
-
-# required by dev-python/qtconsole-5.0.2::gentoo
-# required by dev-python/ipython-7.21.0-r1::gentoo[qt5]
-# required by dev-python/ipykernel-5.5.0::gentoo[-test]
-# required by dev-python/ipyparallel-6.3.0-r1::gentoo[-test]
->=dev-python/QtPy-1.9.0-r2 printsupport
-
 # required by gnome-base/gnome-keyring-3.36.0::gentoo
 # required by app-crypt/libsecret-0.20.4::gentoo
 # required by app-editors/visual-studio-code-bin-1.55.2::guru
 # required by app-editors/visual-studio-code-bin (argument)
 >=app-crypt/pinentry-1.1.0-r4 gnome-keyring
-
-# required by dev-libs/libappindicator-12.10.1_p20200706::gentoo
-# required by net-misc/remmina-1.4.20-r1::gentoo
-# required by remmina (argument)
->=dev-libs/libdbusmenu-16.04.0-r1 gtk3

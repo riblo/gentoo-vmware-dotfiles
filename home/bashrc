@@ -16,6 +16,9 @@ shopt -s autocd direxpand
 # append buffer history to the end of the history file ($HISTFILE)
 shopt -s histappend
 
+# sets the language of output to English (overrides GUI confs) 
+LC_MESSAGES=C
+
 ## History stuffs
 # huge history sizing
 HISTSIZE=10000

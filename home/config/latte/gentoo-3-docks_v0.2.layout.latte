@@ -16,8 +16,8 @@ onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-timerHide=100
-timerShow=100
+timerHide=0
+timerShow=0
 viewType=0
 visibility=4
 wallpaperplugin=org.kde.image
@@ -57,7 +57,7 @@ PreloadWeight=0
 [Containments][1][Applets][67][Configuration][General]
 isInLatteDock=true
 isPreferredForDroppedLaunchers=false
-launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:code.desktop,applications:terminator.desktop,applications:chromium-browser-chromium.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
+launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:terminator.desktop,applications:code.desktop,applications:chromium-browser-chromium.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
 manualScrollTasksType=Disabled
 showOnlyCurrentActivity=false
 
@@ -66,7 +66,7 @@ immutability=1
 plugin=org.kde.plasma.kickerdash
 
 [Containments][1][Applets][72][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][1][Applets][72][Configuration][ConfigDialog]
 DialogHeight=682
@@ -76,7 +76,9 @@ DialogWidth=880
 customButtonImage=/home/riblo/Downloads/natural-gentoo-10.0/src/images/gentoo-logo.svg
 favoriteSystemActions=logout
 favoritesPortedToKAstats=true
+showRecentDocs=false
 useCustomButtonImage=true
+useExtraRunners=false
 
 [Containments][1][ConfigDialog]
 DialogHeight=600
@@ -93,13 +95,13 @@ appletShadowsEnabled=false
 backgroundRadius=35
 durationTime=x1
 hideFloatingGapForMaximized=true
-iconSize=54
+iconSize=58
 lastDodgeVisibilityMode=4
 maxLength=73
 mouseWheelActions=false
 panelShadows=false
 panelSize=100
-panelTransparency=80
+panelTransparency=83
 screenEdgeMargin=8
 shadowColorType=Theme
 shadowOpacity=20
@@ -109,7 +111,7 @@ showGlow=false
 splitterPosition=1
 splitterPosition2=4
 tasksUpgraded=true
-thickMargin=15
+thickMargin=18
 titleTooltips=false
 userBlocksColorizingApplets=72;108
 zoomLevel=11
@@ -160,7 +162,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][130][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][22][Applets][130][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -187,7 +189,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][131][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][22][Applets][131][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -221,7 +223,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][132][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][22][Applets][132][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -248,7 +250,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][133][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][22][Applets][133][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -282,7 +284,6 @@ alignmentUpgraded=true
 appletOrder=131;130;132;133
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
-autoSizeEnabled=false
 backgroundRadius=35
 configurationSticker=true
 durationTime=x1
@@ -290,11 +291,11 @@ iconSize=190
 inConfigureAppletsMode=true
 isStickedOnBottomEdge=true
 lastDodgeVisibilityMode=4
-maxLength=83
+maxLength=87
 mouseWheelActions=false
 panelPosition=10
 panelSize=100
-panelTransparency=80
+panelTransparency=83
 screenEdgeMargin=25
 shadowColorType=Theme
 shadowOpacity=20
@@ -349,7 +350,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][7][Applets][107][Configuration]
-PreloadWeight=10
+PreloadWeight=0
 
 [Containments][7][Applets][107][Configuration][ConfigDialog]
 DialogHeight=682
@@ -374,6 +375,7 @@ DialogHeight=682
 DialogWidth=880
 
 [Containments][7][Applets][109][Configuration][General]
+bold=true
 clickCommand=xdotool key alt+F5
 command=/home/riblo/scripts/get_hw_usage.sh 0.5
 fontFamily=agave NF
@@ -418,6 +420,10 @@ netUpColor=255,255,255
 DialogHeight=682
 DialogWidth=1272
 
+[Containments][7][Applets][112][Configuration][Data]
+networkReceivingTotal=1e+07
+networkSendingTotal=1e+07
+
 [Containments][7][Applets][112][Configuration][General]
 memorySwapGraph=false
 networkUnit=kilobit
@@ -426,22 +432,6 @@ showCpuMonitor=false
 showNetMonitor=true
 showRamMonitor=false
 updateInterval=0.5
-
-[Containments][7][Applets][136]
-immutability=1
-plugin=org.kde.plasma.lock_logout
-
-[Containments][7][Applets][136][Configuration]
-PreloadWeight=0
-
-[Containments][7][Applets][136][Configuration][ConfigDialog]
-DialogHeight=682
-DialogWidth=880
-
-[Containments][7][Applets][136][Configuration][General]
-show_lockScreen=false
-show_requestReboot=true
-show_requestShutDown=false
 
 [Containments][7][Applets][141]
 immutability=1
@@ -493,7 +483,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][7][Applets][146][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][7][Applets][146][Configuration][General]
 containmentType=Latte
@@ -503,7 +493,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][7][Applets][147][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][7][Applets][147][Configuration][ConfigDialog]
 DialogHeight=682
@@ -518,13 +508,57 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][7][Applets][148][Configuration]
-PreloadWeight=42
+PreloadWeight=0
 
 [Containments][7][Applets][148][Configuration][ConfigDialog]
 DialogHeight=682
 DialogWidth=880
 
 [Containments][7][Applets][148][Configuration][General]
+containmentType=Latte
+lengthPixels=7
+
+[Containments][7][Applets][150]
+immutability=1
+plugin=org.kde.plasma.lock_logout
+
+[Containments][7][Applets][150][Configuration]
+PreloadWeight=0
+
+[Containments][7][Applets][150][Configuration][ConfigDialog]
+DialogHeight=682
+DialogWidth=880
+
+[Containments][7][Applets][150][Configuration][General]
+show_requestShutDown=false
+
+[Containments][7][Applets][153]
+immutability=1
+plugin=com.github.zren.commandoutput
+
+[Containments][7][Applets][153][Configuration]
+PreloadWeight=0
+
+[Containments][7][Applets][153][Configuration][ConfigDialog]
+DialogHeight=660
+DialogWidth=880
+
+[Containments][7][Applets][153][Configuration][General]
+command=curl wttr.in/Novazzano?format=3
+fontSize=15
+
+[Containments][7][Applets][154]
+immutability=1
+plugin=org.kde.latte.spacer
+
+[Containments][7][Applets][154][Configuration]
+PreloadWeight=0
+
+[Containments][7][Applets][154][Configuration][ConfigDialog]
+DialogHeight=660
+DialogWidth=880
+
+[Containments][7][Applets][154][Configuration][General]
 containmentType=Latte
 lengthPixels=7
 
@@ -540,7 +574,7 @@ customDateFormat=ddd dd/MM/yyyy
 customSpacing=1.7647058823529413
 dateFormat=customDate
 fixedFont=true
-fontFamily=agave NF
+fontFamily=agave Nerd Font
 fontSize=18
 showSeconds=true
 use24hFormat=2
@@ -641,9 +675,9 @@ PreloadWeight=0
 [Containments][7][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=147;107;39;40;19;146;109;141;112;144;92;148;136;143
-appletShadowsEnabled=false
+appletOrder=147;107;39;40;19;146;153;154;109;141;112;144;92;148;150;143
 backgroundRadius=37
+backgroundShadowSize=8
 configurationSticker=true
 dragActiveWindowEnabled=true
 durationTime=x1
@@ -653,7 +687,7 @@ inConfigureAppletsMode=true
 maxLength=98
 mouseWheelActions=false
 panelSize=100
-panelTransparency=70
+panelTransparency=83
 plasmaBackgroundForPopups=true
 screenEdgeMargin=8
 shadowColorType=Theme
@@ -702,11 +736,18 @@ plugin=org.kde.plasma.networkmanagement
 [Containments][93][Applets][104][Configuration]
 PreloadWeight=0
 
-[Containments][93][Applets][149]
+[Containments][93][Applets][151]
+immutability=1
+plugin=org.kde.plasma.manage-inputmethod
+
+[Containments][93][Applets][151][Configuration]
+PreloadWeight=0
+
+[Containments][93][Applets][155]
 immutability=1
 plugin=org.kde.plasma.mediacontroller
 
-[Containments][93][Applets][149][Configuration]
+[Containments][93][Applets][155][Configuration]
 PreloadWeight=42
 
 [Containments][93][Applets][94]
@@ -714,13 +755,6 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][93][Applets][94][Configuration]
-PreloadWeight=0
-
-[Containments][93][Applets][95]
-immutability=1
-plugin=org.kde.plasma.nightcolorcontrol
-
-[Containments][93][Applets][95][Configuration]
 PreloadWeight=0
 
 [Containments][93][Applets][98]
@@ -734,9 +768,6 @@ PreloadWeight=0
 DialogHeight=682
 DialogWidth=880
 
-[Containments][93][Applets][98][Configuration][General]
-volumeStep=2
-
 [Containments][93][Applets][99]
 immutability=1
 plugin=org.kde.plasma.notifications
@@ -749,8 +780,8 @@ DialogHeight=682
 DialogWidth=880
 
 [Containments][93][General]
-extraItems=org.kde.plasma.devicenotifier,org.kde.plasma.nightcolorcontrol,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.networkmanagement
-knownItems=org.kde.plasma.devicenotifier,org.kde.plasma.nightcolorcontrol,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.battery,org.kde.plasma.keyboardindicator
+extraItems=org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.battery,org.kde.plasma.networkmanagement,org.kde.plasma.manage-inputmethod
+knownItems=org.kde.plasma.devicenotifier,org.kde.plasma.nightcolorcontrol,org.kde.plasma.vault,org.kde.plasma.networkmanagement,org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.plasma.battery,org.kde.plasma.keyboardindicator,org.kde.plasma.manage-inputmethod
 shownItems=org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.battery
 
 [LayoutSettings]

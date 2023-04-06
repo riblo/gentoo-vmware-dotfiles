@@ -3,18 +3,13 @@
 # unofficial/unstable kernel sources
 sys-kernel/gentoo-sources ~amd64
 sys-kernel/xanmod-sources ~amd64
-sys-kernel/liquorix-sources ~amd64
 
 # mesa && deps (latest video drivers)
-media-libs/mesa ~amd64
+#media-libs/mesa ~amd64
 #x11-libs/libdrm ~amd64
 
 # grub-costumizer
 app-admin/grub-customizer ~amd64
-
-# kde-plasma
-#kde-plasma/* ~amd64
-#kde-frameworks/kcoreaddons ~amd64
 
 # vivaldi-snapshot
 www-client/vivaldi-snapshot ~amd64
@@ -46,10 +41,6 @@ app-editors/vscode ~amd64
 
 # github-cli
 dev-util/github-cli ~amd64
-
-# ytfzf stable
-#=net-misc/ytfzf-1.2.0 
-#=media-gfx/ueberzug-18.1.9 
 
 # jc
 dev-python/jc ~amd64

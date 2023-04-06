@@ -7,8 +7,6 @@
 #*/* PYTHON_TARGETS: -* python3_10 python3_11
 #*/* PYTHON_SINGLE_TARGET: -* python3_11
 
-
-
 # LLVM clang
 sys-devel/clang default-compiler-rt default-lld llvm-libunwind
 sys-devel/clang-common default-compiler-rt default-lld llvm-libunwind

@@ -17,7 +17,7 @@ cp -vf ~/.config/latte/gentoo-3-docks_v0.2.layout.latte home/config/latte/
 cp -vf ~/.config/kitty/kitty.conf home/config/kitty/
 cp -vf ~/.config/ytfzf/conf.sh home/config/ytfzf/
 cp -vf ~/.config/mpv/mpv.conf home/config/mpv/
-cp -vf ~/.config/mpv/ytfzfmpvsetting.lua home/config/mpv/
+cp -vf ~/.config/mpv/scripts/ytfzfmpvsetting.lua home/config/mpv/scripts/
 
 # etc
 cp -vf /etc/dracut.conf etc/

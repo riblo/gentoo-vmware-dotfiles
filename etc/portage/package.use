@@ -1,18 +1,23 @@
 # /etc/portage/package.use
 
 # lock/unlock PYTHON TARGETS
-#*/* PYTHON_TARGETS: -* python3_8 python3_9
-#*/* PYTHON_SINGLE_TARGET: -* python3_8
-#*/* PYTHON_TARGETS: -* python3_9
-#*/* PYTHON_SINGLE_TARGET: -* python3_9
+*/* PYTHON_TARGETS: -* python3_10 python3_11
+*/* PYTHON_SINGLE_TARGET: -* python3_10
+
+#*/* PYTHON_TARGETS: -* python3_10 python3_11
+#*/* PYTHON_SINGLE_TARGET: -* python3_11
+
+
 
 # LLVM clang
 sys-devel/clang default-compiler-rt default-lld llvm-libunwind
+sys-devel/clang-common default-compiler-rt default-lld llvm-libunwind
 sys-libs/compiler-rt clang
 sys-libs/compiler-rt-sanitizers clang
+sys-libs/llvm-libunwind static-libs
 
 # open-vm-tools
-app-emulation/open-vm-tools gtkmm
+app-emulation/open-vm-tools gtkmm multimon
 
 # layman
 app-portage/layman sync-plugin-portage git
@@ -20,11 +25,14 @@ app-portage/layman sync-plugin-portage git
 # openrc
 sys-apps/openrc -netifrc
 
+# systemd-utils (!)
+sys-apps/systemd-utils -udev -boot
+
 # syslog-ng
 app-admin/syslog-ng geoip2
 
 # NetworkManager 
-net-misc/networkmanager conchek connection-sharing -dhclient iptables -ppp syslog
+net-misc/networkmanager conchek connection-sharing -dhclient iptables -iwd -ppp syslog
 
 # mesa 
 media-libs/mesa osmesa
@@ -38,8 +46,11 @@ media-libs/mesa wayland
 # libdrm (libkms forced by xf86-video-vmware)
 x11-libs/libdrm libkms
 
+# docker 
+app-containers/docker -cli
+
 # freetype
-media-libs/freetype harfbuzz
+media-libs/freetype harfbuzz utils
 
 # nerd-fonts fonts
 media-fonts/nerd-fonts terminus agave victormono
@@ -50,17 +61,14 @@ app-editors/vim terminal
 # screen
 app-misc/screen nethack
 
-#curl
+# curl
 net-misc/curl ssh 
-
-# youtube-dl
-net-misc/youtube-dl -yt-dlp
 
 # nmap 
 net-analyzer/nmap ncat nping libssh2
 
 # libcaca
-media-libs/libcaca imlib slang
+media-libs/libcaca imlib slang 
 
 # mpv
 media-video/mpv libcaca
@@ -72,7 +80,8 @@ dev-libs/libcdio minimal
 media-video/ffmpeg chromium libdrm libcaca ssh
 
 # libsdl
-media-libs/libsdl libcaca
+media-libs/libsdl libcaca  
+media-libs/libsdl2 haptic
 
 # chromium 
 www-client/chromium official proprietary-codecs -hangouts system-ffmpeg
@@ -98,6 +107,12 @@ kde-apps/okular epub markdown
 # remmina
 net-misc/remmina rdp ssh vnc
 
+# libdbusmenu
+dev-libs/libdbusmenu gtk3
+
+# partclone
+sys-block/partclone ntfs
+
 # extra/testing by cava
 media-sound/alsa-utils bat
 
@@ -113,7 +128,7 @@ media-libs/rubberband ladspa
 net-irc/irssi otr
 
 # eduke32
-games-fps/eduke32 duke3d fluidsynth psx sc-55 voxels
+games-fps/eduke32 duke3d fluidsynth psx sc-55 hrp voidsw
 #games-fps/eduke32 duke3d fluidsynth psx sc-55 server voidsw voxels
 games-fps/duke3d-data demo
 >=media-libs/sdl2-mixer-2.0.4 fluidsynth midi
@@ -122,4 +137,7 @@ games-fps/duke3d-data demo
 # required by app-crypt/libsecret-0.20.4::gentoo
 # required by app-editors/visual-studio-code-bin-1.55.2::guru
 # required by app-editors/visual-studio-code-bin (argument)
->=app-crypt/pinentry-1.1.0-r4 gnome-keyring
+app-crypt/pinentry gnome-keyring
+
+# cool-retro-term
+dev-qt/qtdeclarative localstorage

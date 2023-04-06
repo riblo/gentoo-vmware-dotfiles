@@ -1,5 +1,8 @@
 # .blerc
 
+#fix https://github.com/akinomyoga/ble.sh/issues/177
+bleopt canvas_winch_action=redraw-prev
+
 ble-color-setface argument_option fg=white
 ble-color-setface auto_complete fg=239
 ble-color-setface cmdinfo_cd_cdpath fg=26,bg=155

@@ -11,12 +11,13 @@ immutability=1
 isPreferredForShortcuts=false
 lastScreen=10
 location=4
-name=
+name=dock
 onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-timerHide=0
+screensGroup=0
+timerHide=200
 timerShow=0
 viewType=0
 visibility=4
@@ -57,7 +58,7 @@ PreloadWeight=0
 [Containments][1][Applets][67][Configuration][General]
 isInLatteDock=true
 isPreferredForDroppedLaunchers=false
-launchers59=applications:org.kde.dolphin.desktop,applications:org.kde.kate.desktop,applications:terminator.desktop,applications:code.desktop,applications:chromium-browser-chromium.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
+launchers59=applications:org.kde.kate.desktop,applications:org.kde.dolphin.desktop,applications:terminator.desktop,applications:chromium-browser-chromium.desktop,applications:vscode.desktop,applications:org.remmina.Remmina.desktop,applications:com.github.wwmm.pulseeffects.desktop,applications:kitty.desktop
 manualScrollTasksType=Disabled
 showOnlyCurrentActivity=false
 
@@ -66,7 +67,7 @@ immutability=1
 plugin=org.kde.plasma.kickerdash
 
 [Containments][1][Applets][72][Configuration]
-PreloadWeight=92
+PreloadWeight=87
 
 [Containments][1][Applets][72][Configuration][ConfigDialog]
 DialogHeight=682
@@ -76,6 +77,7 @@ DialogWidth=880
 customButtonImage=/home/riblo/Downloads/natural-gentoo-10.0/src/images/gentoo-logo.svg
 favoriteSystemActions=logout
 favoritesPortedToKAstats=true
+recentOrdering=1
 showRecentDocs=false
 useCustomButtonImage=true
 useExtraRunners=false
@@ -88,12 +90,12 @@ DialogWidth=586
 PreloadWeight=0
 
 [Containments][1][General]
+activeWindowFilter=FromAllScreens
 advanced=false
 alignmentUpgraded=true
 appletOrder=72;67;108
 appletShadowsEnabled=false
 backgroundRadius=35
-durationTime=x1
 hideFloatingGapForMaximized=true
 iconSize=58
 lastDodgeVisibilityMode=4
@@ -141,15 +143,16 @@ enableKWinEdges=true
 formfactor=3
 immutability=1
 isPreferredForShortcuts=true
-lastScreen=11
+lastScreen=10
 layoutId=
 location=6
 maxLength=100
-name=Default Panel
+name=monitor
 onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
+screensGroup=0
 settingsComplexity=4
 timerHide=2000
 timerShow=300
@@ -162,7 +165,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][130][Configuration]
-PreloadWeight=0
+PreloadWeight=26
 
 [Containments][22][Applets][130][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -189,10 +192,10 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][131][Configuration]
-PreloadWeight=0
+PreloadWeight=26
 
 [Containments][22][Applets][131][Configuration][Appearance]
-chartFace=org.kde.ksysguard.barchart
+chartFace=org.kde.circles
 showTitle=true
 title=CPU Core
 
@@ -200,22 +203,86 @@ title=CPU Core
 DialogHeight=682
 DialogWidth=880
 
-[Containments][22][Applets][131][Configuration][SensorColors]
+[Containments][22][Applets][131][Configuration][FaceGrid][Appearance]
+chartFace=org.kde.ksysguard.barchart
+showTitle=false
+
+[Containments][22][Applets][131][Configuration][FaceGrid][SensorColors]
 cpu/cpu.*/usage=197,14,210
 cpu/cpu0/usage=197,14,210
 cpu/cpu1/usage=210,14,76
+cpu/cpu10/usage=174,210,14
+cpu/cpu11/usage=101,210,14
+cpu/cpu12/usage=27,210,14
+cpu/cpu13/usage=14,210,74
+cpu/cpu14/usage=14,210,148
+cpu/cpu15/usage=14,125,210
 cpu/cpu2/usage=210,99,14
 cpu/cpu3/usage=174,210,14
 cpu/cpu4/usage=27,210,14
 cpu/cpu5/usage=14,210,148
 cpu/cpu6/usage=14,125,210
 cpu/cpu7/usage=50,14,210
+cpu/cpu8/usage=210,99,14
+cpu/cpu9/usage=210,172,14
+
+[Containments][22][Applets][131][Configuration][FaceGrid][Sensors]
+highPrioritySensorIds=["cpu/cpu4/usage"]
+
+[Containments][22][Applets][131][Configuration][FaceGrid][org.kde.ksysguard.barchart][General]
+showGridLines=false
+showLegend=false
+showYAxisLabels=false
+
+[Containments][22][Applets][131][Configuration][FaceGrid][org.kde.ksysguard.linechart][General]
+showGridLines=false
+showLegend=false
+showYAxisLabels=false
+
+[Containments][22][Applets][131][Configuration][SensorColors]
+cpu/cpu.*/usage=197,14,210
+cpu/cpu0/usage=197,14,210
+cpu/cpu1/usage=210,14,76
+cpu/cpu10/usage=174,210,14
+cpu/cpu11/usage=101,210,14
+cpu/cpu12/usage=27,210,14
+cpu/cpu13/usage=14,210,74
+cpu/cpu14/usage=14,210,148
+cpu/cpu15/usage=14,125,210
+cpu/cpu2/usage=210,99,14
+cpu/cpu3/usage=174,210,14
+cpu/cpu4/usage=27,210,14
+cpu/cpu5/usage=14,210,148
+cpu/cpu6/usage=14,125,210
+cpu/cpu7/usage=50,14,210
+cpu/cpu8/usage=210,99,14
+cpu/cpu9/usage=210,172,14
+lmsensors/all/maximumTemperature=210,14,64
+lmsensors/cpu0/wait=167,14,210
+lmsensors/cpu1/wait=210,137,14
+lmsensors/cpu10/usage=210,52,14
 
 [Containments][22][Applets][131][Configuration][Sensors]
 highPrioritySensorIds=["cpu/cpu.*/usage"]
+lowPrioritySensorIds=["lmsensors/cpu0/wait","lmsensors/cpu1/wait","lmsensors/cpu10/usage","lmsensors/cpu11/usage","lmsensors/cpu12/user","lmsensors/cpu13/name","lmsensors/all/maximumTemperature"]
 totalSensors=["cpu/all/usage"]
 
+[Containments][22][Applets][131][Configuration][notmart.ksysguard.digitalgauge][General]
+showLegend=false
+
+[Containments][22][Applets][131][Configuration][org.kde.circles][General]
+showLegend=false
+
 [Containments][22][Applets][131][Configuration][org.kde.ksysguard.barchart][General]
+showLegend=false
+
+[Containments][22][Applets][131][Configuration][org.kde.ksysguard.facegrid][General]
+faceId=org.kde.ksysguard.barchart
+
+[Containments][22][Applets][131][Configuration][org.kde.ksysguard.linechart][General]
+showLegend=false
+
+[Containments][22][Applets][131][Configuration][org.kde.ksysguard.piechart][General]
 showLegend=false
 
 [Containments][22][Applets][132]
@@ -223,7 +290,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][132][Configuration]
-PreloadWeight=0
+PreloadWeight=21
 
 [Containments][22][Applets][132][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -250,7 +317,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][22][Applets][133][Configuration]
-PreloadWeight=0
+PreloadWeight=21
 
 [Containments][22][Applets][133][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -285,17 +352,18 @@ appletOrder=131;130;132;133
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 backgroundRadius=35
+backgroundShadowSize=12
 configurationSticker=true
 durationTime=x1
-iconSize=190
+iconSize=198
 inConfigureAppletsMode=true
-isStickedOnBottomEdge=true
 lastDodgeVisibilityMode=4
-maxLength=87
+maxLength=83
 mouseWheelActions=false
 panelPosition=10
 panelSize=100
-panelTransparency=83
+panelTransparency=73
+proportionIconSize=17.5
 screenEdgeMargin=25
 shadowColorType=Theme
 shadowOpacity=20
@@ -334,11 +402,12 @@ immutability=1
 isPreferredForShortcuts=false
 lastScreen=10
 location=3
-name=
-onPrimary=true
+name=bar
+onPrimary=false
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
+screensGroup=0
 timerHide=700
 timerShow=0
 viewType=0
@@ -375,13 +444,13 @@ DialogHeight=682
 DialogWidth=880
 
 [Containments][7][Applets][109][Configuration][General]
-bold=true
 clickCommand=xdotool key alt+F5
 command=/home/riblo/scripts/get_hw_usage.sh 0.5
-fontFamily=agave NF
+fontFamily=Terminus
+fontSize=14
 interval=500
 textAlign=8
-textColor=#ffffff
+textColor=#dadada
 
 [Containments][7][Applets][11]
 immutability=1
@@ -476,7 +545,7 @@ DialogWidth=880
 
 [Containments][7][Applets][144][Configuration][General]
 containmentType=Latte
-lengthPixels=7
+lengthPixels=8
 
 [Containments][7][Applets][146]
 immutability=1
@@ -485,8 +554,13 @@ plugin=org.kde.latte.spacer
 [Containments][7][Applets][146][Configuration]
 PreloadWeight=0
 
+[Containments][7][Applets][146][Configuration][ConfigDialog]
+DialogHeight=660
+DialogWidth=880
+
 [Containments][7][Applets][146][Configuration][General]
 containmentType=Latte
+lengthPixels=12
 
 [Containments][7][Applets][147]
 immutability=1
@@ -544,8 +618,11 @@ DialogHeight=660
 DialogWidth=880
 
 [Containments][7][Applets][153][Configuration][General]
-command=curl wttr.in/Novazzano?format=3
-fontSize=15
+command=/home/riblo/github/dotfiles-gentoo/scripts/geoip_weather.sh
+fontFamily=xos4 Terminus
+fontSize=18
+interval=60000
+textColor=#dadada
 
 [Containments][7][Applets][154]
 immutability=1
@@ -560,7 +637,7 @@ DialogWidth=880
 
 [Containments][7][Applets][154][Configuration][General]
 containmentType=Latte
-lengthPixels=7
+lengthPixels=12
 
 [Containments][7][Applets][19]
 immutability=1
@@ -675,14 +752,14 @@ PreloadWeight=0
 [Containments][7][General]
 alignment=10
 alignmentUpgraded=true
-appletOrder=147;107;39;40;19;146;153;154;109;141;112;144;92;148;150;143
+appletOrder=147;107;39;40;19;146;153;144;109;141;112;154;92;148;150;143
 backgroundRadius=37
 backgroundShadowSize=8
 configurationSticker=true
 dragActiveWindowEnabled=true
 durationTime=x1
 hideFloatingGapForMaximized=true
-iconSize=28
+iconSize=26
 inConfigureAppletsMode=true
 maxLength=98
 mouseWheelActions=false
@@ -695,7 +772,7 @@ shadowOpacity=20
 shadowsUpgraded=true
 solidBackgroundForMaximized=true
 splitterPosition=5
-splitterPosition2=8
+splitterPosition2=7
 tasksUpgraded=true
 thickMargin=11
 titleTooltips=false
@@ -717,9 +794,11 @@ PreloadWeight=0
 activityId=
 formfactor=2
 immutability=1
-lastScreen=-1
+lastScreen=10
 location=3
 plugin=org.kde.plasma.private.systemtray
+popupHeight=528
+popupWidth=528
 wallpaperplugin=org.kde.image
 
 [Containments][93][Applets][103]
@@ -742,13 +821,6 @@ plugin=org.kde.plasma.manage-inputmethod
 
 [Containments][93][Applets][151][Configuration]
 PreloadWeight=0
-
-[Containments][93][Applets][155]
-immutability=1
-plugin=org.kde.plasma.mediacontroller
-
-[Containments][93][Applets][155][Configuration]
-PreloadWeight=42
 
 [Containments][93][Applets][94]
 immutability=1

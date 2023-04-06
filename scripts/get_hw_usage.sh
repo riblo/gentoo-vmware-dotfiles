@@ -32,11 +32,11 @@ idle_d=$((cpu_t1[4] - cpu_t0[4]))
 cpu_perc=$(printf "%.1f%" "$(awk "BEGIN {print ($total_d - $idle_d)/$total_d*100}")")
 
 if [ ${#cpu_perc} -lt 4 ]; then
-    printf "| CPU:  %.1f%% | " "$cpu_perc"
+    printf " CPU:  %.1f%% | " "$cpu_perc"
 elif [ ${#cpu_perc} -lt 5 ]; then
-    printf "| CPU: %.1f%% | " "$cpu_perc"
+    printf " CPU: %.1f%% | " "$cpu_perc"
 else
-    printf "| CPU: 100%%  | " "$cpu_perc"
+    printf " CPU: 100%%  | " "$cpu_perc"
 fi
 
 # RAM Percentage

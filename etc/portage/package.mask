@@ -1,9 +1,15 @@
 # /etc/portage/package.mask
 
 # Prevent Chromium from being compiled again
-www-client/chromium
+#www-client/chromium
 
 # Prevent Kernels upgrade
-sys-kernel/gentoo-sources
-sys-kernel/xanmod-sources
+#sys-kernel/gentoo-sources
+#sys-kernel/xanmod-sources
 sys-kernel/liquorix-sources
+
+# cava
+media-sound/cava
+
+# mesa stable
+#media-libs/mesa-22.2.5

@@ -1,21 +1,20 @@
 # /etc/portage/package.accept_keywords
 
-# unofficial kernel sources
+# unofficial/unstable kernel sources
+sys-kernel/gentoo-sources ~amd64
 sys-kernel/xanmod-sources ~amd64
 sys-kernel/liquorix-sources ~amd64
 
 # mesa && deps (latest video drivers)
 media-libs/mesa ~amd64
-x11-libs/libdrm ~amd64
-
-# vmware tools
-app-emulation/open-vm-tools ~amd64
+#x11-libs/libdrm ~amd64
 
 # grub-costumizer
 app-admin/grub-customizer ~amd64
 
-# kde-plasma 5.24
-kde-plasma/* ~amd64
+# kde-plasma
+#kde-plasma/* ~amd64
+#kde-frameworks/kcoreaddons ~amd64
 
 # vivaldi-snapshot
 www-client/vivaldi-snapshot ~amd64
@@ -31,23 +30,26 @@ app-shells/starship ~amd64
 app-vim/dracula ~amd64
 
 # latte-dock
-kde-misc/latte-dock ~amd64
+kde-misc/latte-dock ~amd64 
 
 # packer
-=dev-util/packer-1.7.2 
+=dev-util/packer-1.7.6 ~amd64 
 
 # ovftool
 =dev-util/ovftool-4.4.0.16360108 
 
+# partclone
+=sys-block/partclone-0.3.18 ~amd64
+
 # visual studio code
-app-editors/visual-studio-code-bin ~amd64
+app-editors/vscode ~amd64
 
 # github-cli
 dev-util/github-cli ~amd64
 
 # ytfzf stable
-=net-misc/ytfzf-1.2.0 
-=media-gfx/ueberzug-18.1.9 
+#=net-misc/ytfzf-1.2.0 
+#=media-gfx/ueberzug-18.1.9 
 
 # jc
 dev-python/jc ~amd64
@@ -100,6 +102,9 @@ games-misc/wtf ~amd64
 # terminus-ttf font
 media-fonts/terminus-ttf ~amd64
 
+# cool-retro-term
+x11-terms/cool-retro-term ~amd64
+
 # asciiquarium
 games-misc/asciiquarium ~amd64
 dev-perl/Term-Animation ~amd64
@@ -122,3 +127,7 @@ net-analyzer/bettercap ~amd64
 
 # cheat
 app-misc/cheat ~amd64
+
+# cpu-x
+sys-apps/cpu-x ~amd64
+>=dev-libs/libcpuid-0.6.0 ~amd64

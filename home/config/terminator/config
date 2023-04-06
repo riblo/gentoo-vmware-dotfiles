@@ -1,10 +1,8 @@
 [global_config]
   geometry_hinting = True
-  title_hide_sizetext = True
   inactive_color_offset = 0.8048387096774193
   enabled_plugins = ActivityWatch, CustomCommandsMenu, TerminalShot, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
   always_split_with_profile = True
-  title_font = Iosevka Term Oblique Expanded 7
 [keybindings]
   zoom_in = <Primary>plus
   zoom_out = <Primary>minus
@@ -16,7 +14,6 @@
     icon_bell = False
     background_darkness = 0.83
     background_type = transparent
-    cursor_color = "#9141ac"
     font = agave Nerd Font Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False
@@ -31,7 +28,6 @@
   [[black]]
     icon_bell = False
     background_darkness = 1.0
-    cursor_color = "#9141ac"
     font = agave Nerd Font Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False
@@ -46,7 +42,6 @@
     icon_bell = False
     background_darkness = 0.37
     background_type = transparent
-    cursor_color = "#9141ac"
     font = agave Nerd Font Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False
@@ -61,7 +56,6 @@
     icon_bell = False
     background_darkness = 0.0
     background_type = transparent
-    cursor_color = "#9141ac"
     font = agave Nerd Font Mono 15
     foreground_color = "#ffffff"
     show_titlebar = False
